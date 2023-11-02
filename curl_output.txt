@@ -1,0 +1,3 @@
+URL: https://www.credit-agricole.fr
+Nombre de requêtes: 50
+Temps moyen de réponse: 0.239161 secondes
