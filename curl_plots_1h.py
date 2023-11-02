@@ -28,7 +28,7 @@ for _ in range(24) :
     # Calculer la moyenne des temps de réponse
     average_response_times.append(sum(response_times) / num_requests)
     
-    sleep(1)
+    sleep(3600)
 
 # for i in range(24) :
 #     print(f"Temps moyen de réponse pour {num_requests} requêtes vers {url} à {i}h: {average_response_times[i]:.6f} secondes")
