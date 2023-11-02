@@ -1,6 +1,5 @@
 import subprocess
 from time import sleep
-import numpy as np
 import matplotlib.pyplot as plt
 
 # URL du site à tester
@@ -30,9 +29,6 @@ for _ in range(24) :
     
     sleep(3600)
 
-# for i in range(24) :
-#     print(f"Temps moyen de réponse pour {num_requests} requêtes vers {url} à {i}h: {average_response_times[i]:.6f} secondes")
-
 # Create a list of hours (0-23) for the x-axis
 hours = list(range(24))
 
@@ -43,9 +39,13 @@ plt.title('Mean Response Time Over the Day')
 plt.xlabel('Time')
 plt.ylabel('Mean Response Time (seconds)')
 
+# Set X-axis limits to go from 0 to 23
+plt.xlim(0, 23)
+
 # Set Y-axis limits to go from 0 to 1
 plt.ylim(0, 1)
 
+# Display grid lines
 plt.grid(True)
 
 # Save the plot as a PNG image
