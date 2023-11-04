@@ -27,26 +27,28 @@ for _ in range(24) :
     # Calculer la moyenne des temps de réponse
     average_response_times.append(sum(response_times) / num_requests)
     
+    # Attend 1h avant de faire la prochaine opération
+    # On peut changer cette valeur pour la remplacer par une plus petite si besoin
     sleep(3600)
 
-# Create a list of hours (0-23) for the x-axis
+# Crée la liste des heures (0-23) pour l'axe des abscisses
 hours = list(range(24))
 
-# Create the line plot
+# Crée le plot
 plt.figure(figsize=(10, 5))  # Adjust the figure size as needed
 plt.plot(hours, average_response_times, marker='o', linestyle='-')
 plt.title('Mean Response Time Over the Day')
 plt.xlabel('Time')
 plt.ylabel('Mean Response Time (seconds)')
 
-# Set X-axis limits to go from 0 to 23
+# Configure les limites de l'axe des X pour aller de 0 à 23
 plt.xlim(0, 23)
 
-# Set Y-axis limits to go from 0 to 1
+#Configure les limites de l'axe des Y pour aller de 0 à 1
 plt.ylim(0, 1)
 
-# Display grid lines
+# Affiche la grille
 plt.grid(True)
 
-# Save the plot as a PNG image
+# Enregistre la figure au format png
 plt.savefig('response_time_plot.png')
