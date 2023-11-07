@@ -11,7 +11,7 @@ num_requests = 50
 # Liste pour stocker les temps de réponse moyen
 average_response_times = []
 
-for _ in range(24) :
+for i in range(24) :
     # Liste pour stocker les temps de réponse de chaque requête
     response_times = []
     
@@ -25,7 +25,11 @@ for _ in range(24) :
             response_times.append(response_time)
 
     # Calculer la moyenne des temps de réponse
-    average_response_times.append(sum(response_times) / num_requests)
+    avg_resp_t = sum(response_times) / num_requests
+    average_response_times.append(avg_resp_t)
+    
+    # Affiche la progression
+    print("Hour " + str(i) + " : " + str(avg_resp_t))
     
     # Attend 1h avant de faire la prochaine opération
     # On peut changer cette valeur pour la remplacer par une plus petite si besoin
