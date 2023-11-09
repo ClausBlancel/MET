@@ -11,7 +11,7 @@ rtt_durations = []
 total_execution_time = 3600
 
 # Durée de la requête en secondes (60 secondes = 1 minute)
-request_interval = 60
+request_interval = 20
 
 # Boucle pour effectuer les requêtes pendant une heure
 import time
@@ -32,9 +32,9 @@ while time.time() - start_time < total_execution_time:
 
 # Générer l'histogramme
 plt.hist(rtt_durations, bins=20, edgecolor='k')
-plt.title('Histogramme des durées RTT')
-plt.xlabel('Durée RTT (secondes)')
-plt.ylabel('Nombre de requêtes')
+plt.title('Histogram of Response Times')
+plt.xlabel('Response Time (seconds)')
+plt.ylabel('Requests number')
 
 # Enregistrer l'histogramme dans un fichier PNG
 plt.savefig('histogramme_rtt.png')
